@@ -2,8 +2,57 @@
 
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="puzzle.css">
+    <link rel="stylesheet" type="text/css" href="jack.css">
+    <script type="text/javascript" src="jack.js"></script>
   </head>
   <body>
+    <p class="dealer" id="handText">Dealer's Cards:</p>
+        <p class="cards">
+          <canvas width="158px" height="246px" id="handOne">
+        </p>
+        <p class="cards">
+          <canvas width="158px" height="246px" id="handTwo">
+        </p>
+        <p class="cards">
+          <canvas width="158px" height="246px" id="handThree">
+        </p>
+        <p class="cards">
+          <canvas width="158px" height="246px" id="handFour">
+        </p>
+        <p class="cards">
+          <canvas width="158px" height="246px" id="handFive">
+        </p>
+    <p class="hand" id="handText">Your Cards:</p>
+        <p class="cards">
+          <canvas width="158px" height="246px" id="handOne">
+        </p>
+        <p class="cards">
+          <canvas width="158px" height="246px" id="handTwo">
+        </p>
+        <p class="cards">
+          <canvas width="158px" height="246px" id="handThree">
+        </p>
+        <p class="cards">
+          <canvas width="158px" height="246px" id="handFour">
+        </p>
+        <p class="cards">
+          <canvas width="158px" height="246px" id="handFive">
+        </p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    <div class="button">
+      <button onclick="restart" class="NewGame">New Game</button>
+      <button onclick="hit" class="hit">Hit</button>
+      <button onclick="stand" class="stand">Stand</button>
+    </div>
   </body>
 </html>
