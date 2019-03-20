@@ -5,7 +5,7 @@ var handNum = [];
 var dealer = [];
 var dealerNum = [];
 var turn = 0;
-var gameOver = 1;
+var gameOver = 0;
 var handSum = 0;
 var dealerSum = 0;
 //turn = 1; your turn
@@ -24,7 +24,7 @@ function reset() {
   dealer = [];
   dealerNum = [];
   turn = 0;
-  gameOver = 1;
+  gameOver = 0;
   handSum = 0;
   dealerSum = 0;
 }
@@ -149,11 +149,19 @@ function convert() {
 
 function stand() {
 
-  if (dealerSum <= 17) {
-    deal(1);
+  if (gameOver == 0) {
+    turn = 2;
+    while (dealerSum < 17) {
+      deal(2);
+      endGame();
+    }
+    console.log(dealer);
   }
-  if (dealerSum = 21) {
-    gameOver = 2;
-  }
-  console.log(stand);
+//  if (dealerSum <= 17) {
+//    deal(1);
+//  }
+//  if (dealerSum == 21) {
+//    gameOver = 2;
+//  }
+//  console.log(stand);
 }
