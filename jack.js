@@ -171,7 +171,7 @@ console.log(handSum + " is the handSum");
     ctx.strokeText(temp, 70, 170);
     console.log(dealer);
       alert("YOU WIN\nYour hand total: " + handSum + "\nDealer's hand total: " + dealerSum);
-    } else if (dealerSum > handSum) {
+    } else if (dealerSum > handSum && dealerSum < 22) {
       gameOver = 1;
       var c = document.getElementById("2");
     var ctx = c.getContext("2d");
@@ -195,6 +195,18 @@ console.log(handSum + " is the handSum");
     ctx.strokeText(temp, 70, 170);
     console.log(dealer);
       alert("YOU TIED\nYour hand total: " + handSum + "\nDealer's hand total: " + dealerSum);
+    } else {
+      gameOver = 1;
+      var c = document.getElementById("2");
+    var ctx = c.getContext("2d");
+    ctx.clearRect(0, 0, 158, 246);
+    var temp = deck[3];
+    ctx.textAlign = "center";
+    ctx.textAlign = "middle";
+    ctx.font = "120px Arial";
+    ctx.strokeText(temp, 70, 170);
+    console.log(dealer);
+      alert("YOU LOSE\nYour hand total: " + handSum + "\nDealer's hand total: " + dealerSum);
     }
   }
   console.log(gameOver);
