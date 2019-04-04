@@ -146,7 +146,7 @@ console.log(handSum + " is the handSum");
     if (dealerSum < handSum) {
       gameOver = 2;
       alert("YOU WIN\nYour hand total: " + handSum + "\nDealer's hand total: " + dealerSum);
-    } else if (dealerSum > handSum) {
+    } else if (dealerSum > handSum && dealerSum <= 21) {
       gameOver = 1;
       alert("YOU LOSE\nYour hand total: " + handSum + "\nDealer's hand total: " + dealerSum);
     } else if (dealerSum == handSum) {
